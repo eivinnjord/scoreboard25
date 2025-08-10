@@ -6,7 +6,7 @@ const Scoreboard = () => {
   const [scores, setScores] = useState([]);
 
   useEffect(() => {
-    fetch("/scores.xlsx")
+    fetch("https://docs.google.com/spreadsheets/d/1srD_Jgc9MAcpDyO7rdPBujMuVRQKSxRD/edit?usp=sharing&ouid=107647002332187569544&rtpof=true&sd=true")
       .then((response) => response.arrayBuffer())
       .then((buffer) => {
         const wb = XLSX.read(buffer, { type: "buffer" });
